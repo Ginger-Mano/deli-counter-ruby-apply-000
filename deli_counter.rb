@@ -12,11 +12,14 @@ def line(katz_deli)
     puts "#{greeting}"
    end
 end
-
-def take_a_number(katz_deli, name)
-    katz_deli << name
-    puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
+$counter = 1
+def take_a_number
+    puts "Order number #{$counter}"
+    $counter += 1
 end
+puts take_a_number
+puts take_a_number
+puts take_a_number
 
 def now_serving(katz_deli)
     if katz_deli.empty?
@@ -25,3 +28,12 @@ def now_serving(katz_deli)
     puts "Currently serving #{katz_deli.shift}."
   end
 end
+
+=begin def line, take in argument, check current status, or create greeting by checking each person and adding counter. Then puts out greeting.
+=end
+
+=begin def take_a_number, asks to put two agruments, shoved name in line, puts out statement with person and number of people in line.
+=end
+
+=begin def now_serving, puts an argument. Check if no one on line, puts statement. Else, put statement with number of people on line.
+=end
